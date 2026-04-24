@@ -1,0 +1,41 @@
+services:
+  # Backend: Laravel
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: erp-backend
+    volumes:
+      - ./backend:/var/www/html
+    environment:
+      - DB_CONNECTION=pgsql
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+  # Frontend: React (Vite)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: erp-frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+
+  # DB : PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: erp-db
+    environment:
+      POSTGRES_DB: erp_db
+      POSTGRES_USER: said_dev
+      POSTGRES_PASSWORD: password123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
