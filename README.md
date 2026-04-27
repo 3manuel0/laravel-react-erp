@@ -2,22 +2,25 @@
 
 ## 1. Project Identification
 
-**Project Name:** Nexus ERP  
-**Developer:** [Your Name]  
-**Stack:** Laravel 11 (API) + React 18 (SPA)  
-**Objective:** A professional-grade ERP to manage Human Resources, Inventory, and Financial transactions.
+**Project Name:** (TODO: I NEED TO FIND A GOOD NAme) ERP
+
+**Developer:** 3manuel
+
+**Stack:** Laravel 13 (backend) + React 19 (frontend) + nginx
+
+**Objective:** An ERP to manage Human Resources, Inventory, and Financial transactions.
 
 ---
 
 ## 2. Technical Stack & Architecture
 
-To demonstrate full-stack mastery, the project uses a **decoupled architecture**:
+This project served as a deep dive into **decoupled architecture**:
 
 - **Backend:** PHP Laravel (RESTful API)
   - _Features:_ Eloquent ORM, Sanctum Auth, Form Requests (Validation), API Resources.
 - **Frontend:** ReactJS (Vite)
-  - _Features:_ Tailwind CSS, Axios, React Router v6, Lucide Icons.
-- **Database:** MySQL / PostgreSQL.
+  - _Features:_ Shadcn, Axios, React Router, Lucide Icons.
+- **Database:** PostgreSQL.
 
 ---
 
@@ -89,14 +92,13 @@ To demonstrate full-stack mastery, the project uses a **decoupled architecture**
 4.  **Phase 4:** Inventory & Supplier CRUD.
 5.  **Phase 5:** Invoicing System & PDF Export.
 
-# Structure
+## 8. Structure
 
 ```bash
 laravel-react-erp/
 ├── backend/
 ├── frontend/
 ├── docker-compose.yml
-├── .env
 └── nginx/
     └── default.conf
 ```
