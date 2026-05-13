@@ -2,7 +2,7 @@
 
 ## 1. Project Identification
 
-**Project Name:** (TODO: I NEED TO FIND A GOOD NAme) ERP
+**Project Name:** (TODO: I NEED TO FIND A GOOD Name) ERP
 
 **Developer:** 3manuel
 
@@ -61,6 +61,8 @@ This project served as a deep dive into **decoupled architecture**:
 - **Suppliers:** `id, company_name, email, phone, address`
 - **Products:** `id, supplier_id, name, sku, stock_quantity, price`
 - **Invoices:** `id, invoice_number, total_amount, tax, status, created_at`
+
+## ![class_diagram](images/class_diagram.png)
 
 ---
 
